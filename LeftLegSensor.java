@@ -33,18 +33,19 @@ public class LeftLegSensor {
 
 
 	//method to call in sensor GUI class / turns sensor on or off.
-	public static void sensorOn() {
-
+	public boolean SensorOn(boolean isOn) {
+		
 		if (isOn == true) {
-
-			System.out.println("Left leg sensor is on");
-
+			
+			System.out.println("Chest sensor is on");
+			
 		}
 		else if (isOn == false) {
-
-			System.out.println("Left leg sensor is off");
+			
+			System.out.println("Chest sensor is off");
 		}
-
+		return isOn;
+		
 	}
 
 	// This method asks for user input for the current temperature of the users left leg to simulate a current left leg temperature
