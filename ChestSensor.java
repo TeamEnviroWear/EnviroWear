@@ -18,8 +18,13 @@ import java.util.Scanner;
 
 //The temperature sensor picks up on safe / unsafe temperatures, sends warnings, and adjusts automatically to keep the user within safe temperature conditions
 
-public class ChestSensor {
+public class ChestSensor extends ChestSensorGUI {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	static double ChestTemp = 0.0; // used as variable for current temperature of users chest
 	static double minTempSet = 0.0; // used for setting the minimum temperature setting that user enters
 	static double maxTempSet = 0.0; // used or setting the maximum temperature setting that use enters
@@ -32,7 +37,7 @@ public class ChestSensor {
 	
 	
 	//method to call in sensor GUI class / turns sensor on or off.
-	public static void sensorOn() {
+	public boolean SensorOn(boolean isOn) {
 		
 		if (isOn == true) {
 			
@@ -43,6 +48,7 @@ public class ChestSensor {
 			
 			System.out.println("Chest sensor is off");
 		}
+		return isOn;
 		
 	}
 
